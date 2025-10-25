@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Elite Models — Home</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+    <!-- NAVBAR -->
+    <header id="siteHeader" class="site-header">
+      <nav class="navbar navbar-expand-lg py-3">
+        <div class="container">
+          <a class="navbar-brand text-gold fw-bold" href="#">Elite Models</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+              <li class="nav-item"><a class="nav-link" href="#form-section">Únete</a></li>
+              <li class="nav-item"><a class="nav-link" href="#forum-section">Foro</a></li>
+              <li class="nav-item"><a class="nav-link" href="#music-section">Música</a></li>
+            </ul>
+            <div class="d-none d-lg-flex ms-3 social-links">
+              <a href="#" class="me-3 text-gold">Instagram</a>
+              <a href="#" class="me-3 text-gold">TikTok</a>
+              <a href="#" class="text-gold">YouTube</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- HERO / BOOTSTRAP CAROUSEL (Full width) -->
+    <section class="hero mb-5">
+      <div id="modelsCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#modelsCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#modelsCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#modelsCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="img1.jpg" class="d-block w-100" alt="Sean O'Pry">
+            <div class="carousel-caption d-none d-md-block text-start">
+              <h2 class="text-gold">Sean O'Pry</h2>
+              <p>Top Model · Editorial & Runway</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <video class="d-block w-100" autoplay  loop playsinline>
+              <source src="img2.mp4" type="video/mp4">
+            </video>
+            <div class="carousel-caption d-none d-md-block text-start">
+              <h2 class="text-gold">Jordan Barret</h2>
+              <p>Fashion Icon · Exclusive</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+          <video class="d-block w-100" autoplay muted loop playsinline>
+    <source src="img3.mp4" type="video/mp4">
+            </video>
+            <div class="carousel-caption d-none d-md-block text-start">
+              <h2 class="text-gold">Matt Gordon</h2>
+              <p>Silver Fox · Campaigns</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#modelsCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#modelsCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Siguiente</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- CONTENT -->
+    <main class="container">
+
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <section id="form-section" class="card dark-card p-4">
+            <h3 class="text-gold">Únete a Elite</h3>
+            <p class="muted">Completa tus datos y nuestro equipo te contactará.</p>
+            <form id="registerForm">
+              <div class="mb-3">
+                <input type="text" class="form-control bg-dark text-white" name="name" placeholder="Nombre" required>
+              </div>
+              <div class="mb-3">
+                <input type="email" class="form-control bg-dark text-white" name="email" placeholder="Correo electrónico" required>
+              </div>
+              <div class="mb-3">
+                <textarea class="form-control bg-dark text-white" name="why" placeholder="¿Por qué deseas unirte?" rows="4" required></textarea>
+              </div>
+              <button class="btn btn-gold w-100" type="submit">Enviar</button>
+            </form>
+          </section>
+
+          <section id="music-section" class="card dark-card p-4 mt-4">
+            <h3 class="text-gold">Música</h3>
+            <p class="muted">Reproductor (autoplay si el navegador lo permite). Coloca el archivo en <code>/audio/stray_slowed.wav</code>.</p>
+            <audio id="player" controls loop>
+              <source src="Stray.wav super slowed.mp3" type="audio/wav">
+              Tu navegador no soporta el audio.
+            </audio>
+          </section>
+        </div>
+
+        <div class="col-lg-6">
+          <section id="forum-section" class="card dark-card p-4">
+            <h3 class="text-gold">Foro de Inquietudes</h3>
+            <p class="muted">Comparte tus preguntas o inquietudes.</p>
+            <div id="forum" class="mb-3 forum-list" style="max-height:300px;overflow:auto"></div>
+            <textarea id="forumInput" class="form-control bg-dark text-white mb-2" rows="3" placeholder="Escribe aquí..."></textarea>
+            <div class="d-flex gap-2">
+              <button id="postBtn" class="btn btn-gold">Publicar</button>
+              <button id="clearForum" class="btn btn-outline-light">Limpiar</button>
+            </div>
+          </section>
+
+          <section class="card dark-card p-4 mt-4 social-card">
+            <h3 class="text-gold">Síguenos</h3>
+            <div class="d-flex gap-3 align-items-center mt-2">
+              <a class="btn btn-outline-gold" href="#">Instagram</a>
+              <a class="btn btn-outline-gold" href="#">TikTok</a>
+              <a class="btn btn-outline-gold" href="#">YouTube</a>
+            </div>
+          </section>
+        </div>
+      </div>
+
+    </main>
+
+    <footer class="mt-5 py-4 text-center text-muted">
+      <small>© Elite Models — 2025 • Sitio demo</small>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+  </body>
+</html>

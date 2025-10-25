@@ -1,0 +1,39 @@
+:root{
+  --gold:#d4af37;
+  --bg:#070708;
+  --card:#0f0f10;
+}
+*{box-sizing:border-box}
+body{font-family:'Montserrat',system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial; background:var(--bg); color:#fff; margin:0}
+
+/* Navbar */
+.site-header .navbar{background:transparent}
+.site-header.scrolled .navbar{background:rgba(2,2,2,0.92);box-shadow:0 8px 30px rgba(0,0,0,0.6);border-bottom:1px solid rgba(212,175,55,0.08)}
+.navbar-brand{font-weight:700;color:var(--gold)}
+.nav-link{color:#fff !important}
+.text-gold{color:var(--gold)}
+.muted{color:rgba(255,255,255,0.72)}
+
+/* Hero / Carousel styles to make it dramatic */
+.hero .carousel-item{height:70vh}
+.hero .carousel-item img{object-fit:cover;height:70vh;filter:brightness(0.55)}
+.carousel-caption{left:6%;bottom:18%;text-align:left}
+.carousel-caption h2{font-size:2.4rem;font-weight:700}
+.carousel-caption p{opacity:0.9}
+
+/* Cards */
+.card.dark-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border:1px solid rgba(212,175,55,0.06);}
+.btn-gold{background:var(--gold);color:#000;border:none}
+.btn-outline-gold{color:var(--gold);border:1px solid rgba(212,175,55,0.18);background:transparent}
+.btn-outline-light{border:1px solid rgba(255,255,255,0.06);color:#fff;background:transparent}
+
+/* Forum list */
+.forum-list .post{padding:10px;border-bottom:1px solid rgba(255,255,255,0.03)}
+.forum-list .post strong{color:var(--gold)}
+
+/* Responsive tweaks */
+@media (max-width:768px){
+  .carousel-caption h2{font-size:1.6rem}
+  .hero .carousel-item{height:50vh}
+  .hero .carousel-item img{height:50vh}
+}
